@@ -11,9 +11,18 @@ import com.facebook.soloader.SoLoader;
 import java.util.Arrays;
 import java.util.List;
 
+import com.reactnativecomponent.splashscreen.RCTSplashScreenPackage;    //import package
+
 public class MainApplication extends Application implements ReactApplication {
 
+  /**
+ * A list of packages used by the app. If the app uses additional views
+ * or modules besides the default ones, add more packages here.
+ */
+
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+   
+  
     @Override
     public boolean getUseDeveloperSupport() {
       return BuildConfig.DEBUG;
@@ -22,7 +31,8 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
+          new MainReactPackage(),
+          new RCTSplashScreenPackage()  
       );
     }
 
